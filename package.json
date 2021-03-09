@@ -1,11 +1,15 @@
 {
   "name": "boss-lib",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "main": "lib/boss-lib.common.js",
+  "style": "lib/theme-chalk/index.css",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "build:style": "gulp build --gulpfile packages/theme-chalk/gulpfile.js && cp-cli packages/theme-chalk/lib lib/theme-chalk",
+    "lib": "vue-cli-service build --target lib --name boss-lib --dest lib packages/index.js && webpack --config ./build/webpack.component.js"
   },
   "dependencies": {
     "core-js": "^3.6.5",
@@ -15,16 +19,19 @@
     "xe-utils": "^3.1.11"
   },
   "devDependencies": {
+    "cp-cli": "^2.0.0",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
-    "node-sass": "^4.9.2",
-    "sass-loader": "^7.0.3",
+    "node-sass": "^4.14.1",
+    "progress-bar-webpack-plugin": "^2.1.0",
+    "sass-loader": "^10.1.1",
     "vue-cli-plugin-element": "~1.0.1",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.11",
+    "webpack-cli": "^4.5.0"
   },
   "eslintConfig": {
     "root": true,
