@@ -645,7 +645,7 @@
       .quick-nav-btn{
         height:48px;
         i{
-          background: url('./imgs/backwhite.svg') no-repeat center;
+          // background: url('./imgs/backwhite.svg') no-repeat center;
         }
       }
       position: fixed;
@@ -660,7 +660,7 @@
           background: #fff;
           height:48px;
           i{
-          background: url('./imgs/icon-menu-btn-df.svg') no-repeat center;
+          // background: url('./imgs/icon-menu-btn-df.svg') no-repeat center;
           }
           top: 60px;
           span {
@@ -989,7 +989,7 @@
     box-sizing: border-box;
     height: 80px;
     padding: 20px 3px;
-    background: url(./imgs/basic/lrvisible-bg.png);
+    // background: url(./imgs/basic/lrvisible-bg.png);
     background-size: 100% 100%;
 
     .fmcl-control-ico {
@@ -997,7 +997,7 @@
       height: 40px;
       transform: rotate(180deg);
       transform-origin: center center;
-      background: url(./imgs/basic/lrvisible.png);
+      // background: url(./imgs/basic/lrvisible.png);
       background-size: 100% 100%;
     }
   }

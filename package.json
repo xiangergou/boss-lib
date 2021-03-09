@@ -2,14 +2,15 @@
   "name": "boss-lib",
   "version": "0.1.0",
   "private": false,
-  "main": "lib/boss-lib.common.js",
+  "main": "lib/boss-lib.umd.min.js",
   "style": "lib/theme-chalk/index.css",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "build:style": "gulp build --gulpfile packages/theme-chalk/gulpfile.js && cp-cli packages/theme-chalk/lib lib/theme-chalk",
-    "lib": "vue-cli-service build --target lib --name boss-lib --dest lib packages/index.js"
+    "lib": "vue-cli-service build --target lib --name boss-lib --dest lib packages/index.js",
+    "dist": "npm run lib && npm run build:style"
   },
   "dependencies": {
     "core-js": "^3.6.5",

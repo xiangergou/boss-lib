@@ -44,29 +44,29 @@ button{
     border: none;
     outline: none;
 }
-@font-face {
-    font-family: 'reducto_condensed_ssiCn';
-    src: url('font/reducto_condensed_ssi_condensed-webfont.eot');
-    src: url('font/reducto_condensed_ssi_condensed-webfont.eot?#iefix')
-    format('embedded-opentype'),
-    url('font/reducto_condensed_ssi_condensed-webfont.woff2')
-    format('woff2'),
-    url('font/reducto_condensed_ssi_condensed-webfont.woff')
-    format('woff'),
-    url('font/reducto_condensed_ssi_condensed-webfont.ttf')
-    format('truetype'),
-    url('font/reducto_condensed_ssi_condensed-webfont.svg#reducto_condensed_ssiCn')
-    format('svg');
-    font-weight: normal;
-    font-style: normal
-}
-@font-face {
-    font-family: 'SourceHanSansCN';
-    src: url('font/SourceHanSansCN/SourceHanSansCN-Normal.otf')
-    format('otf');
-    font-weight: normal;
-    font-style: normal
-}
+// @font-face {
+//     font-family: 'reducto_condensed_ssiCn';
+//     src: url('font/reducto_condensed_ssi_condensed-webfont.eot');
+//     src: url('font/reducto_condensed_ssi_condensed-webfont.eot?#iefix')
+//     format('embedded-opentype'),
+//     url('font/reducto_condensed_ssi_condensed-webfont.woff2')
+//     format('woff2'),
+//     url('font/reducto_condensed_ssi_condensed-webfont.woff')
+//     format('woff'),
+//     url('font/reducto_condensed_ssi_condensed-webfont.ttf')
+//     format('truetype'),
+//     url('font/reducto_condensed_ssi_condensed-webfont.svg#reducto_condensed_ssiCn')
+//     format('svg');
+//     font-weight: normal;
+//     font-style: normal
+// }
+// @font-face {
+//     font-family: 'SourceHanSansCN';
+//     src: url('font/SourceHanSansCN/SourceHanSansCN-Normal.otf')
+//     format('otf');
+//     font-weight: normal;
+//     font-style: normal
+// }
 
 /* 将具有默认margin和padding的标记置零 */
 *{margin:0;padding:0;}
