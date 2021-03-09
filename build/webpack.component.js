@@ -3,7 +3,7 @@ const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 const Components = require('./get-components')();
-console.log('Components',Components)
+
 const entry = {};
 Components.forEach(c => {
   entry[c] = `./packages/${c}/index.js`;
@@ -29,10 +29,27 @@ const webpackConfig = {
       test: /\.js$/,
       loader: 'babel-loader',
       exclude: /node_modules/
-    }, {
+    },  {
       test: /\.vue$/,
-      loader: 'vue-loader'
-    }]
+      loader: 'vue-loader',
+      options: {
+        compilerOptions: {
+          preserveWhitespace: false
+        }
+      }
+    },
+    {
+        test: /\.css$/,
+        loaders: ['style-loader', 'css-loader']
+      },
+      {
+        test: /\.(svg|otf|ttf|woff2?|eot|gif|png|jpe?g)(\?\S*)?$/,
+        loader: 'url-loader',
+        query: {
+          limit: 10000,
+          name: path.posix.join('static', '[name].[hash:7].[ext]')
+        }
+      }]
   },
   plugins: [
     new ProgressBarPlugin(),

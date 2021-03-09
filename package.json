@@ -9,7 +9,7 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "build:style": "gulp build --gulpfile packages/theme-chalk/gulpfile.js && cp-cli packages/theme-chalk/lib lib/theme-chalk",
-    "lib": "vue-cli-service build --target lib --name boss-lib --dest lib packages/index.js && webpack --config ./build/webpack.component.js"
+    "lib": "vue-cli-service build --target lib --name boss-lib --dest lib packages/index.js"
   },
   "dependencies": {
     "core-js": "^3.6.5",
