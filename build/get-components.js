@@ -7,6 +7,7 @@ const excludes = [
   'mixins',
   'utils',
   'fonts',
+  'images',
   '.DS_Store'
 ];
 
