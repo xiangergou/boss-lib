@@ -1,0 +1,594 @@
+@charset "utf-8";
+/* 	@功能: 重设浏览器默认样式 */
+/* 防止用户自定义背景颜色对网页的影响，添加让用户可以自定义字体 user-select: none;*/
+html { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; user-select: none; }
+/* 内外边距通常让各个浏览器样式的表现位置不同 */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4\, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { margin: 0; padding: 0; }
+/* 重设 HTML5 标签, IE 需要在 js 中 createElement(TAG) */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+/* HTML5 媒体文件跟 img 保持一致 */
+audio, canvas, video { display: inline-block; *display: inline;*zoom: 1;}
+/* 要注意表单元素并不继承父级 font 的问题 */
+body, button, input, select, textarea { font: 12px/1.5 "微软雅黑"; }
+input, select, textarea { font-size: 100%; }
+/* 去掉各Table  cell 的边距并让其边重合 */
+table { border-collapse: collapse; border-spacing: 0; }
+/* IE bug fixed: th 不继承 text-align*/
+th { text-align: inherit; }
+/* 去除默认边框 */
+fieldset, img { border: 0; }
+/* ie6 7 8(q) bug 显示为行内表现 */
+iframe { display: block; }
+/* 去掉 firefox 下此元素的边框 */
+abbr, acronym { border: 0; font-variant: normal; }
+/* 一致的 del 样式 */
+del { text-decoration: line-through; }
+address, caption, cite, code, dfn, em, th, var { font-style: normal; font-weight: 500; }
+/* 去掉列表前的标识, li 会继承 */
+ol, ul { list-style: none; }
+/* 对齐是排版最重要的因素, 别让什么都居中 */
+caption, th { text-align: left; }
+/* 来自yahoo, 让标题都自定义, 适应多个系统应用 */
+h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: 500; }
+q:before, q:after { content: ''; }
+/* 统一上标和下标 */
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+/* 默认不显示下划线，保持页面简洁 */
+ins, a { text-decoration: none; }
+button{
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+@font-face {
+    font-family: 'reducto_condensed_ssiCn';
+    src: url('font/reducto_condensed_ssi_condensed-webfont.eot');
+    src: url('font/reducto_condensed_ssi_condensed-webfont.eot?#iefix')
+    format('embedded-opentype'),
+    url('font/reducto_condensed_ssi_condensed-webfont.woff2')
+    format('woff2'),
+    url('font/reducto_condensed_ssi_condensed-webfont.woff')
+    format('woff'),
+    url('font/reducto_condensed_ssi_condensed-webfont.ttf')
+    format('truetype'),
+    url('font/reducto_condensed_ssi_condensed-webfont.svg#reducto_condensed_ssiCn')
+    format('svg');
+    font-weight: normal;
+    font-style: normal
+}
+@font-face {
+    font-family: 'SourceHanSansCN';
+    src: url('font/SourceHanSansCN/SourceHanSansCN-Normal.otf')
+    format('otf');
+    font-weight: normal;
+    font-style: normal
+}
+
+/* 将具有默认margin和padding的标记置零 */
+*{margin:0;padding:0;}
+/*
+ * 修正iE5.x和iE6的斜体溢出bug
+ * @bugfix
+ * @css-for    iE 5.x/win, iE6
+ */
+* html body{
+overflow: visible;
+}
+* html iframe, * html frame{
+overflow: auto;
+}
+* html frameset{
+overflow: hidden;
+}
+/*
+ * 基本标签默认样式取消
+ * @overlay hTMl标签
+ * @desc 取消基本标签默认样式,防止不同浏览器显示效果不同
+ * @Prop text-align:center; 解决不同浏览器剧中问题
+ */
+body{color:#000;background:#fff;font:12px/22px Verdana,Arial,sans-serif,"Times new roman",宋体;}
+body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div,tr{margin:0;padding:0;}
+input,select{font-size:12px;vertical-align:middle;}
+/*
+ * 标签属性
+ * @overlay textarea,input
+ * @desc 强制输入时内容超出时换行
+ */
+textarea,input{ word-wrap:break-word;word-break:break-all;padding:0px;}
+/*
+ * 清除ul列表标记的样式
+ * @overlay  li
+ * @desc ul列表更多的用在不需要列表前置符号的样式里
+ */
+li{list-style-type:none;}
+/*
+ * 定义图片边框
+ * @overlay img
+ * @desc 当图片作为链接内容被填充时，会有默认边框出现，重定义掉
+ */
+img{border:0 none;}
+/*
+ * 定义默认的链接样式
+ * @overlay a
+ * @desc 仅仅是作为默认样式提供，可以在各自的实例中覆盖掉
+ */
+a:link, a:visited{
+text-decoration: none;
+}
+a:hover{
+color:#f60;
+text-decoration: underline;
+}
+/* 清理浮动 */
+.fn-clear:after { visibility: hidden; display: block; content: " "; clear: both; height: 0; }
+.fn-clear { zoom: 1; /* for IE6 IE7 */ }
+.fn-inline { display: inline-block;vertical-align: middle;font-style: normal;}
+.fl {float: left;}
+.fr {float: right;}
+.btn{cursor: pointer; outline: none;}
+/* 去掉链接的虚线框 */
+a,button,input,textarea,select{outline: none;}
+/*a {star : expression(this.onFocus=this.blur());}*/
+/*
+ * 定义h系列标签
+ * @overlay hn
+ * @desc  覆盖h系列标签默认属性
+ */
+h1{ font-size:24px;}
+h2{ font-size:20px;}
+h3{ font-size:18px;}
+h4{ font-size:16px;}
+h5{ font-size:14px;}
+h6{ font-size:12px;}
+
+/*   常用样式定义  */
+
+/*
+ * 边框定义
+ * @Pro 由大写b开头,表示系统公用边框样式
+ * @desc 常用样式可更具一个项目的样式使用频率重新定义,扩展
+ */
+.btw{ border-top-width:1px;}
+.brw{ border-right-width:1px;}
+.blw{ border-left-width:1px;}
+.bbw{ border:0px; border-bottom-width:1px;}
+.bord1{border:1px solid #999;}
+.bord2{border:2px solid #999;}
+
+/*  边框宽度  (bw开头)    */
+.bw1{ border-width:1px;}
+.bw2{ border-width:2px;}
+.bw3{ border-width:3px;}
+.bw4{ border-width:4px;}
+.bw5{ border-width:5px;}
+/*    边框样式 (bs开头)    */
+.bss{ border-style:solid;}
+.bsd{ border-style:dashed;}
+/*    边框颜色  (bc开头)   */
+.bcblue{ border-color: #0000ff;}
+.bcblack{ border-color: #000;}
+/*   下划线   */
+.botline{ border-bottom:1px solid #CfCfCf; overflow:hidden;}
+
+/*
+ * 宽度定义
+ * @Pro 由小写C开头,表示color
+ * @desc 常用样式可更具一个项目的样式使用频率重新定义,扩展
+ */
+.w1200,.w1024,.w1000,.w786,.w975,.w972{width:968px;margin:0 auto;}
+.w1200{width:1200px;}
+.w1024{width:1024px;}
+.w1000{width:1000px;}
+.w786{width:786px;}
+.w975{width:975px;}
+.w972{width:972px;}
+.w100{width: 100%!important;}
+.wp100{width: 100%}
+.mw{min-width: 1px}
+.mh{min-height: 1px}
+/*
+ * 定义字体样式
+ * @Pro 由大写字母f开头,表示fonT
+ * @desc 常用样式可更具一个项目的样式使用频率重新定义,扩展
+ */
+/*  字体样式 */
+.fb{font-weight:bold;}
+.fn{ font-weight:normal;}
+.fi{font-style:italic;}
+/*  字体大小  */
+.f0{font-size: 0!important;}
+.f10{font-size:10px!important;}
+.f11{font-size:11px!important;}
+.f12{font-size:12px!important;}
+.f13{font-size:13px!important;}
+.f14{font-size:14px!important;}
+.f16{font-size:16px!important;}
+.f18{font-size:18px!important;}
+.f20{font-size:20px!important;}
+.f24{font-size:24px!important;}
+.f30{font-size:30px!important;}
+.f40{font-size:40px!important;}
+.f50{font-size:50px!important;}
+.f60{font-size:60px!important;}
+/*
+ * 颜色功能定义
+ * @Pro 由小写C开头,表示color
+ * @desc 常用样式可更具一个项目的样式使用频率重新定义,扩展
+ */
+.cred{color: #ed4014;}
+.cwhite{color: #fff;}
+.cgreen{color:#19be6b;}
+.cgray6{color: #666;}
+.cgray3{color: #333;}
+.cgray9{color: #999;}
+.corange{color: #f90;}
+.cblue{ color: #2d8cf0;}
+.cblack{ color:#000;}
+.cinfor{color:#2db7f5;}
+/*
+ * 定义行高
+ * @class lh
+ * @desc 使用较少,主要定义line-height属性
+ */
+ .lh1em{line-height:1em!important;}
+.lh1{ line-height:1px!important;}
+.lh10{ line-height:10px!important;}
+.lh15{ line-height:15px!important;}
+.lh18{ line-height:18px!important;}
+.lh20{ line-height:20px!important;}
+.lh25{ line-height:25px!important;}
+.lh30{ line-height:30px!important;}
+.lh32{ line-height:32px!important;}
+.lh34{ line-height:32px!important;}
+.lh35{ line-height:35px!important;}
+.lh36 {line-height: 36px!important;}
+.lh40{ line-height:40px!important;}
+.lh50{ line-height:50px!important;}
+.lh60{ line-height:60px!important;}
+/*
+ * 定义margin
+ * @class mg
+ */
+.mg1{ margin:1px!important;}
+.mg10{ margin:10px!important;}
+.mg15{ margin:15px!important;}
+.mg18{ margin:18px!important;}
+.mg20{ margin:20px!important;}
+.mg25{ margin:25px!important;}
+.mg30{ margin:30px!important;}
+.mg35{ margin:35px!important;}
+.mg36 {margin: 36px!important;}
+.mg40{ margin:40px!important;}
+.mg50{ margin:50px!important;}
+.mg60{ margin:60px!important;}
+/*
+ * 定义margin : px auto
+ * @class mga
+ */
+.mga1{ margin:1px auto!important;}
+.mga10{ margin:10px auto!important;}
+.mga15{ margin:15px auto!important;}
+.mga18{ margin:18px auto!important;}
+.mga20{ margin:20px auto!important;}
+.mga25{ margin:25px auto!important;}
+.mga30{ margin:30px auto!important;}
+.mga35{ margin:35px auto!important;}
+.mga36 {margin: 36px auto!important;}
+.mga40{ margin:40px auto!important;}
+.mga50{ margin:50px auto!important;}
+.mga60{ margin:60px auto!important;}
+/*
+ * 定义margin-left
+ * @class mgl
+ */
+.mgl1{ margin-left:1px!important;}
+.mgl10{ margin-left:10px!important;}
+.mgl15{ margin-left:15px!important;}
+.mgl18{ margin-left:18px!important;}
+.mgl20{ margin-left:20px!important;}
+.mgl25{ margin-left:25px!important;}
+.mgl30{ margin-left:30px!important;}
+.mgl35{ margin-left:35px!important;}
+.mgl36 {margin-left: 36px!important;}
+.mgl40{ margin-left:40px!important;}
+.mgl50{ margin-left:50px!important;}
+.mgl60{ margin-left:60px!important;}
+/*
+ * 定义margin-right
+ * @class mgr
+ */
+.mgr1{ margin-right:1px!important;}
+.mgr10{ margin-right:10px!important;}
+.mgr15{ margin-right:15px!important;}
+.mgr18{ margin-right:18px!important;}
+.mgr20{ margin-right:20px!important;}
+.mgr25{ margin-right:25px!important;}
+.mgr30{ margin-right:30px!important;}
+.mgr35{ margin-right:35px!important;}
+.mgr36 {margin-right: 36px!important;}
+.mgr40{ margin-right:40px!important;}
+.mgr50{ margin-right:50px!important;}
+.mgr60{ margin-right:60px!important;}
+/*
+ * 定义margin-top
+ * @class mgt
+ */
+.mgt1{ margin-top:1px!important;}
+.mgt10{ margin-top:10px!important;}
+.mgt15{ margin-top:15px!important;}
+.mgt18{ margin-top:18px!important;}
+.mgt20{ margin-top:20px!important;}
+.mgt25{ margin-top:25px!important;}
+.mgt30{ margin-top:30px!important;}
+.mgt35{ margin-top:35px!important;}
+.mgt36 {margin-top: 36px!important;}
+.mgt40{ margin-top:40px!important;}
+.mgt50{ margin-top:50px!important;}
+.mgt60{ margin-top:60px!important;}
+/*
+ * 定义margin-bottom
+ * @class mgb
+ */
+.mgb1{ margin-bottom:1px!important;}
+.mgb10{ margin-bottom:10px!important;}
+.mgb15{ margin-bottom:15px!important;}
+.mgb18{ margin-bottom:18px!important;}
+.mgb20{ margin-bottom:20px!important;}
+.mgb25{ margin-bottom:25px!important;}
+.mgb30{ margin-bottom:30px!important;}
+.mgb35{ margin-bottom:35px!important;}
+.mgb36 {margin-bottom: 36px!important;}
+.mgb40{ margin-bottom:40px!important;}
+.mgb50{ margin-bottom:50px!important;}
+.mgb60{ margin-bottom:60px!important;}
+/*
+ * 定义padding
+ * @class pd
+ */
+.pd1{ padding:1px!important;}
+.pd10{ padding:10px!important;}
+.pd15{ padding:15px!important;}
+.pd18{ padding:18px!important;}
+.pd20{ padding:20px!important;}
+.pd25{ padding:25px!important;}
+.pd30{ padding:30px!important;}
+.pd35{ padding:35px!important;}
+.pd36 {padding: 36px!important;}
+.pd40{ padding:40px!important;}
+.pd50{ padding:50px!important;}
+.pd60{ padding:60px!important;}
+/*
+ * 定义padding-left
+ * @class pdl
+ */
+.pdl1{ padding-left:1px!important;}
+.pdl10{ padding-left:10px!important;}
+.pdl15{ padding-left:15px!important;}
+.pdl18{ padding-left:18px!important;}
+.pdl20{ padding-left:20px!important;}
+.pdl25{ padding-left:25px!important;}
+.pdl30{ padding-left:30px!important;}
+.pdl35{ padding-left:35px!important;}
+.pdl36 {padding-left: 36px!important;}
+.pdl40{ padding-left:40px!important;}
+.pdl50{ padding-left:50px!important;}
+.pdl60{ padding-left:60px!important;}
+/*
+ * 定义padding-right
+ * @class pdr
+ */
+.pdr1{ padding-right:1px!important;}
+.pdr10{ padding-right:10px!important;}
+.pdr15{ padding-right:15px!important;}
+.pdr18{ padding-right:18px!important;}
+.pdr20{ padding-right:20px!important;}
+.pdr25{ padding-right:25px!important;}
+.pdr30{ padding-right:30px!important;}
+.pdr35{ padding-right:35px!important;}
+.pdr36 {padding-right: 36px!important;}
+.pdr40{ padding-right:40px!important;}
+.pdr50{ padding-right:50px!important;}
+.pdr60{ padding-right:60px!important;}
+/*
+ * 定义padding-top
+ * @class pdt
+ */
+.pdt1{ padding-top:1px!important;}
+.pdt10{ padding-top:10px!important;}
+.pdt15{ padding-top:15px!important;}
+.pdt18{ padding-top:18px!important;}
+.pdt20{ padding-top:20px!important;}
+.pdt25{ padding-top:25px!important;}
+.pdt30{ padding-top:30px!important;}
+.pdt35{ padding-top:35px!important;}
+.pdt36 {padding-top: 36px!important;}
+.pdt40{ padding-top:40px!important;}
+.pdt50{ padding-top:50px!important;}
+.pdt60{ padding-top:60px!important;}
+/*
+ * 定义margin-bottom
+ * @class pdb
+ */
+.pdb1{ padding-bottom:1px!important;}
+.pdb10{ padding-bottom:10px!important;}
+.pdb15{ padding-bottom:15px!important;}
+.pdb18{ padding-bottom:18px!important;}
+.pdb20{ padding-bottom:20px!important;}
+.pdb25{ padding-bottom:25px!important;}
+.pdb30{ padding-bottom:30px!important;}
+.pdb35{ padding-bottom:35px!important;}
+.pdb36 {padding-bottom: 36px!important;}
+.pdb40{ padding-bottom:40px!important;}
+.pdb50{ padding-bottom:50px!important;}
+.pdb60{ padding-bottom:60px!important;}
+/*  单行省略  */
+.olh{overflow: hidden;text-overflow:ellipsis;white-space: nowrap;}
+/*  鼠标样式 */
+.pointer{cursor:pointer;}
+.move{cursor: move;}
+.wait{cursor: wait;}
+.help{cursor: help;}
+/*  鼠标点击不可修改 */
+.eventsnone{pointer-events:none;}
+         
+/* 取消边框 */
+.nb{border:0 none;}
+/*  文本对齐方式  */
+.tr{text-align: right!important;}
+.tc{text-align: center!important;}
+.tl{text-align: left!important;}
+
+/*
+ * 字母和单词换行设置
+ * @class break 强制内容换行
+ * @class nobreak 强制内容不换行
+ */
+.break{word-break:break-all;word-wrap:break-word;}
+.nobreak{word-break:keep-all;word-wrap:normal;}
+
+/*     浮动定义   */
+.fl {float: left;}
+.fr {float: right;}
+.fn-inline { display: inline-block; vertical-align: middle;font-style: normal;}
+/*
+ * 清理元素
+ * @class clear
+ * @desc 清理浮动元素,当浮动换行时后面元素不希望浮动，添加此属性，防止iE bug
+ */
+.clear{clear:both; height:0px; width:100%; line-height:0px; visibility:hidden; overflow:hidden;}
+
+/*  定义文本下划线  */
+.unline{text-decoration:underline;}
+.disunline{text-decoration:none;}
+
+/*    定位关系     */
+.absolute{position:absolute;}
+.relative{position:relative;}
+.fixed{position:fixed;}
+
+/* 通用容器 */
+.wrapper{clear: both;overflow: hidden;}
+/*
+ * 隐藏元素
+ * @class o-hidden
+ * @desc 当元素内容内容超出元素height 或 width 时，隐藏之
+ */
+.o-hidden{overflow:hidden;}
+/*
+ * 隐藏元素
+ * @class invisible
+ * @desc visibility可以隐藏元素，但是还是会在布局中占位
+ */
+.vh{visibility:hidden;}
+.vv{visibility: visible;}
+/*
+ * 从页面布局上隐藏元素
+ * @class hidden
+ * @desc 从布局上隐藏元素
+ */
+.hidden{display: none;}
+.block {display:block;}
+.lineblock {display:inline-block;}
+/* flex布局样式 */
+.flex {  display: flex;  display: -ms-box;  display: -webkit-box;  display: flex;  display: -ms-flexbox;  display: -webkit-flex;}
+.flex-item {  display: block;  flex: 1;  -ms-flex: 1;  -webkit-flex: 1;  box-flex: 1;  -ms-box-flex: 1; -webkit-box-flex: 1; }
+.flex-container{justify-content: center; align-items: center;}
+
+/* 通用样式 */
+.btn{cursor: pointer;outline: none;}
+.bgf{ background: #ffffff;}
+.html-hide{ height: 100%;width: 100%;overflow: hidden;}
+ .html-hide {
+   height: 100%;
+   width: 100%;
+   overflow: hidden;
+ }
+ .overflow-auto {
+   overflow: auto;
+ }
+
+.height-all {
+   height: 100%;
+   box-sizing: border-box;
+   
+ }
+ .height-half {
+   height: 50%;
+   box-sizing: border-box;
+ }
+
+ .height-trisection {
+   height: 33.33%;
+   box-sizing: border-box;
+ }
+
+
+/* ::-webkit-scrollbar //滚动条整体部分，其中的属性有width,height,background,border（就和一个块级元素一样）等。（位置1）
+::-webkit-scrollbar-button //滚动条两端的按钮。可以用display:none让其不显示，也可以添加背景图片，颜色改变显示效果。（位置2）
+::-webkit-scrollbar-track // 外层轨道。可以用display:none让其不显示，也可以添加背景图片，颜色改变显示效果（位置3）
+::-webkit-scrollbar-track-piece //内层轨道，滚动条中间部分（位置4）
+::-webkit-scrollbar-thumb //滚动条里面可以拖动的那部分（位置5）
+::-webkit-scrollbar-corner //边角（位置6
+/*chrome滚动条样式*/
+/* ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b4cbdd;
+  border-radius: 10px;
+  box-shadow: inset 0 0 2px rgba(0, 0, 0, .3);
+} */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: #FAFAFA;
+   border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  /* background-color: #BDDCFD; */
+  background: #CFD2D4;
+  /* border-radius: 0 8px 8px 0; */
+ border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #9EA4A9;
+}
+
+input::-webkit-input-placeholder {
+  color: #ddd;
+}
+
+input::-moz-placeholder {
+ color: #ddd;
+}
+
+input:-ms-input-placeholder {
+  color: #ddd;
+}
+
+input::-webkit-input-placeholder {
+  color: #ddd;
+}
+
+input::placeholder {
+  color: #ddd;
+}

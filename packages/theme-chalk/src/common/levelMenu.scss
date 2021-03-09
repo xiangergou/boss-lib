@@ -1,0 +1,74 @@
+/* 导航栏三级菜单开始样式 */
+.LevelMenu {
+  flex-direction: column;
+  background: #1E8CFB !important;
+}
+.MenuList-item {
+  width: 200px;
+  line-height: 30px;
+  font-size: 14px;
+  justify-content: space-around;
+  align-items: center;
+}
+.MenuList-item-message {
+  width: 100px;
+  align-items: center;
+  text-align: left;
+}
+.MenuList-item:hover {
+  background: #006FE0;
+}
+.MenuList-item-list {
+  width: 200px;
+  line-height: 30px;
+  font-size: 14px;
+  justify-content: space-around;
+  align-items: center;
+}
+.menu-item {
+  display: block;
+  flex-direction: column;
+  align-items: center;
+}
+.el-menu--horizontal>.el-submenu .el-submenu__title {
+  background: #1E8CFB;
+  color: #fff;
+}
+.el-menu--horizontal>.el-submenu .el-submenu__title:hover {
+  background: #006FE0;
+  color: #fff;
+}
+.el-icon-s-unfold:before {
+  color: #fff;
+}
+.el-submenu__title:hover{
+  background: #1E8CFB !important;
+  color: #fff !important;
+  .el-icon-arrow-right {
+    color: #fff !important;
+  }
+}
+.el-menu--popup-right-start>.el-submenu:hover {
+  color: #1E8CFB !important;
+}
+.el-menu--horizontal>.el-submenu.is-active .el-submenu__title {
+  color: #fff;
+}
+.el-icon-arrow-down:before {
+  color: rgba(255,255,255,0);
+}
+.el-menu--popup-bottom-start {
+    margin-top: 10px;
+    min-height: 400px;
+    min-width: 300px;
+}
+.el-menu--popup-right-start {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 300px;
+    height: 400px;
+}
+.el-menu--popup-right-start > .el-menu-item:hover {
+  color: #006FE0 !important;
+}
+/* 导航栏三级菜单结束样式 */
