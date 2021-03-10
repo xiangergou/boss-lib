@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="166px" height="17px" viewBox="0 0 166 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <title>编组 17</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="-1.11022302e-14%" y1="50%" x2="100%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#B2C4FA" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#7B92F4" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#7B91F3" offset="0%"></stop>
+            <stop stop-color="#65B9FF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="大气" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="3重污染决策-方案执行跟踪" transform="translate(-1099.000000, -189.000000)" fill-rule="nonzero">
+            <g id="小标题" transform="translate(851.000000, 187.000000)">
+                <g id="编组-17" transform="translate(248.006606, 0.950136)">
+                    <path d="M10.9933937,10.0498645 L166.493394,10.0498645" id="Line-2" stroke="url(#linearGradient-1)" stroke-linecap="square" transform="translate(88.743394, 10.049864) scale(-1, 1) translate(-88.743394, -10.049864) "></path>
+                    <path d="M4.5,4 C5.32842712,4 6,4.67157288 6,5.5 L6,16.5 C6,17.3284271 5.32842712,18 4.5,18 C3.67157288,18 3,17.3284271 3,16.5 L3,5.5 C3,4.67157288 3.67157288,4 4.5,4 Z" id="Rectangle-4" fill="url(#linearGradient-2)" transform="translate(4.500000, 11.000000) rotate(23.000000) translate(-4.500000, -11.000000) "></path>
+                    <path d="M11.5,1 C12.3284271,1 13,1.67157288 13,2.5 L13,13.5 C13,14.3284271 12.3284271,15 11.5,15 C10.6715729,15 10,14.3284271 10,13.5 L10,2.5 C10,1.67157288 10.6715729,1 11.5,1 Z" id="Rectangle-4" fill="url(#linearGradient-2)" transform="translate(11.500000, 8.000000) rotate(23.000000) translate(-11.500000, -8.000000) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

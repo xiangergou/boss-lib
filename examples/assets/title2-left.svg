@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="156px" height="17px" viewBox="0 0 156 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <title>编组 16</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="-1.11022302e-14%" y1="50%" x2="100%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#B2C4FA" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#7B92F4" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#7B91F3" offset="0%"></stop>
+            <stop stop-color="#65B9FF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="大气" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="3重污染决策-方案执行跟踪" transform="translate(-852.000000, -189.000000)" fill-rule="nonzero">
+            <g id="小标题" transform="translate(851.000000, 187.000000)">
+                <g id="编组-16" transform="translate(0.500000, 0.950136)">
+                    <path d="M0,10.0498645 L144.5,10.0498645" id="Line-2" stroke="url(#linearGradient-1)" stroke-linecap="square"></path>
+                    <path d="M145.006606,4 C145.835033,4 146.506606,4.67157288 146.506606,5.5 L146.506606,16.5 C146.506606,17.3284271 145.835033,18 145.006606,18 C144.178179,18 143.506606,17.3284271 143.506606,16.5 L143.506606,5.5 C143.506606,4.67157288 144.178179,4 145.006606,4 Z" id="Rectangle-4" fill="url(#linearGradient-2)" transform="translate(145.006606, 11.000000) rotate(23.000000) translate(-145.006606, -11.000000) "></path>
+                    <path d="M152.006606,1 C152.835033,1 153.506606,1.67157288 153.506606,2.5 L153.506606,13.5 C153.506606,14.3284271 152.835033,15 152.006606,15 C151.178179,15 150.506606,14.3284271 150.506606,13.5 L150.506606,2.5 C150.506606,1.67157288 151.178179,1 152.006606,1 Z" id="Rectangle-4" fill="url(#linearGradient-2)" transform="translate(152.006606, 8.000000) rotate(23.000000) translate(-152.006606, -8.000000) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

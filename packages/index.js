@@ -21,6 +21,7 @@ import BsOperationLog from './OperationLog/index.js'
 import BsQuery from './Query/index.js'
 import BsRichTextEditor from './RichTextEditor/index.js'
 import BsTab from './Tab/index.js'
+import BsTitle from './Title/index.js'
 
 
 
@@ -28,7 +29,7 @@ import BsTab from './Tab/index.js'
 const components =
   [
     BsButton, BsArticleSteps, BsCardMenu, BsCrumbs, BsForm, BsJsonEditor, BsOperationLog,
-    BsQuery, BsRichTextEditor, BsTab
+    BsQuery, BsRichTextEditor, BsTab, BsTitle
   ];
 
 // 定义 install 方法
@@ -62,6 +63,7 @@ export default {
   BsOperationLog,
   BsQuery,
   BsRichTextEditor,
-  BsTab
+  BsTab,
+  BsTitle
 };
 
