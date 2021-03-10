@@ -1,11 +1,3 @@
-/*
- * @Author: 轻语
- * @Date: 2021-03-09 17:12:07
- * @LastEditors: 轻语
- * @LastEditTime: 2021-03-09 21:13:57
- * @Description: 
- */
-
 const ArraySlice = Array.prototype.slice
 
 /**
@@ -186,7 +178,7 @@ const deepObjCopy = (obj) => {
   let newObj = obj instanceof Array ? [] : {}
   for (let key in obj) {
     // 遍历obj,并且判断是obj的属性才拷贝
-    if (Object.prototype.hasOwnProperty.call(obj, key)) {
+    if (obj.hasOwnProperty(key)) {
       // 判断属性值的类型，如果是对象递归调用深拷贝
       newObj[key] =
         typeof obj[key] === 'object' ? me.deepCopy(obj[key]) : obj[key]
