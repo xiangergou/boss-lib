@@ -5,6 +5,7 @@
  * 每次列表更新时将滚动条滚动到列表顶部
  * v-scrollTop="{update : boolean,  x: 0, y: 0}" || v-scrollTop="update"
  */
+/* eslint-disable */
 const scrollTo = {
   update(el, binding) {
     const value = binding.value
