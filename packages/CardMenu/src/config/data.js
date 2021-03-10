@@ -103,7 +103,8 @@ export default {
   },
   methods: {
     generateCardMenu() {
-      const sysMenu = this.$store.state.systemMenu || []
+      // const sysMenu = this.$store.state.systemMenu || []
+      const sysMenu = []
       // console.log(sysMenu)
       let sysMenuCp = [...sysMenu]
       let cardMenuTemp = []
