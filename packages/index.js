@@ -2,7 +2,7 @@
  * @Author: 轻语
  * @Date: 2021-03-09 16:41:56
  * @LastEditors: 轻语
- * @LastEditTime: 2021-03-10 15:18:49
+ * @LastEditTime: 2021-03-10 15:40:26
  * @Description: 
  */
 
@@ -18,13 +18,14 @@ import BsJsonEditor from './JsonEditor/index'
 import Directives from './Directive/index' // 指令
 import LoadingMark from './Loadingmark/index'
 import BsOperationLog from './OperationLog/index'
+import BsQuery from './Query/index'
 
 // 组件集合，用于遍历
 const components =
-  [BsButton, BsArticleSteps, BsCardMenu, BsCrumbs, BsForm, BsJsonEditor, BsOperationLog];
-
-// const utilsLib = [LoadingMark]
-
+  [
+    BsButton, BsArticleSteps, BsCardMenu, BsCrumbs, BsForm, BsJsonEditor, BsOperationLog,
+    BsQuery
+  ];
 
 // 定义 install 方法
 const install = function (Vue) {
@@ -36,7 +37,6 @@ const install = function (Vue) {
 
   components.map((component) => Vue.component(component.name, component));
   
-  // utilsLib.map(util => Vue.prototype['$' + util] = util)
   Vue.prototype.$LoadingMark = LoadingMark;
   
 };
@@ -45,17 +45,6 @@ const install = function (Vue) {
 if (typeof window !== "undefined" && window.Vue) {
   install(window.Vue);
 }
-
-
-// export {
-//   install, 
-//   BsButton,
-//   BsArticleSteps,
-//   BsCardMenu,
-//   BsForm,
-//   BsJsonEditor,
-//   LoadingMark
-// };
 
 export default {
   install, 
@@ -66,6 +55,7 @@ export default {
   BsForm,
   BsJsonEditor,
   LoadingMark,
-  BsOperationLog
+  BsOperationLog,
+  BsQuery
 };
 
