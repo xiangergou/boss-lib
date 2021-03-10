@@ -8,7 +8,8 @@ const excludes = [
   'utils',
   'fonts',
   'images',
-  '.DS_Store'
+  '.DS_Store',
+  'plugins'
 ];
 
 module.exports = function () {

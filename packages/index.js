@@ -2,11 +2,11 @@
  * @Author: 轻语
  * @Date: 2021-03-09 16:41:56
  * @LastEditors: 轻语
- * @LastEditTime: 2021-03-10 16:39:12
+ * @LastEditTime: 2021-03-10 20:20:04
  * @Description: 
  */
 
-import vxeTable from './plugins/vxeTable.js'
+// import vxeTable from './plugins/vxeTable.js'
 
 
 import BsButton from "./Button/index.js";
@@ -15,7 +15,7 @@ import BsCardMenu from "./CardMenu/index.js";
 import BsCrumbs from './Crumbs/index.js'
 import BsForm from './Form/index.js'
 import BsJsonEditor from './JsonEditor/index.js'
-import Directives from './Directive/index.js' // 指令
+// import Directives from './Directive/index.js' // 指令
 import LoadingMark from './Loadingmark/index.js'
 import BsOperationLog from './OperationLog/index.js'
 import BsQuery from './Query/index.js'
@@ -36,8 +36,8 @@ const components =
 const install = function (Vue) {
   if (install.installed) return;
 
-  Vue.use(Directives);
-  Vue.use(vxeTable)
+  // Vue.use(Directives);
+  // Vue.use(vxeTable)
   // 遍历注册全局组件
 
   components.map((component) => Vue.component(component.name, component));

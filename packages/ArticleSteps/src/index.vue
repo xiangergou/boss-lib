@@ -9,6 +9,8 @@
   </ul>
 </template>
 <script>
+import vdom from 'boss-lib/src/utils/vdom.js'
+
 export default {
   name: "bs-article-steps",
   data() {
@@ -27,11 +29,15 @@ export default {
         return [{name: 'fuck'}, {name: 'shit'}]
       }
     }
+  },
+  mounted() {
+    console.log('fuck')
+    console.log(vdom, 'vdom')
   }
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .suc-steps {
   width: 705px;
   margin: 30px auto;

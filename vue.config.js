@@ -39,6 +39,6 @@ module.exports = {
       .test(/\.(png|jpe?g|gif|webp|svg)(\?.*)?$/)
       .use('url-loader')
       .loader('url-loader')
-      .tap(options => Object.assign(options, { limit: 10 * 1024 }))
+      .tap(options => Object.assign(options, { limit: 50 * 1024 }))
   }
 };    
