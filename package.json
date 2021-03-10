@@ -26,7 +26,8 @@
     "vxe-table-plugin-menus": "^1.5.3",
     "xe-clipboard": "^1.10.1",
     "xe-utils": "2.8.3",
-    "xlsx": "0.16.8"
+    "xlsx": "0.16.8",
+    "vue-quill-editor": "^3.0.6"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",

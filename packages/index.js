@@ -2,7 +2,7 @@
  * @Author: 轻语
  * @Date: 2021-03-09 16:41:56
  * @LastEditors: 轻语
- * @LastEditTime: 2021-03-10 15:40:26
+ * @LastEditTime: 2021-03-10 16:01:17
  * @Description: 
  */
 
@@ -19,12 +19,16 @@ import Directives from './Directive/index' // 指令
 import LoadingMark from './Loadingmark/index'
 import BsOperationLog from './OperationLog/index'
 import BsQuery from './Query/index'
+import BsRichTextEditor from './RichTextEditor/index'
+import BsTab from './Tab/index.js'
+
+
 
 // 组件集合，用于遍历
 const components =
   [
     BsButton, BsArticleSteps, BsCardMenu, BsCrumbs, BsForm, BsJsonEditor, BsOperationLog,
-    BsQuery
+    BsQuery, BsRichTextEditor, BsTab
   ];
 
 // 定义 install 方法
@@ -56,6 +60,8 @@ export default {
   BsJsonEditor,
   LoadingMark,
   BsOperationLog,
-  BsQuery
+  BsQuery,
+  BsRichTextEditor,
+  BsTab
 };
 
