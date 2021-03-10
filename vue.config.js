@@ -36,7 +36,7 @@ module.exports = {
   chainWebpack: config => {
     config.module
       .rule('images')
-      // .test(/\.(png|jpe?g|gif|webp|svg)(\?.*)?$/)
+      .test(/\.(png|jpe?g|gif|webp|svg)(\?.*)?$/)
       .use('url-loader')
       .loader('url-loader')
       .tap(options => Object.assign(options, { limit: 10 * 1024 }))

@@ -2,7 +2,7 @@
  * @Author: 轻语
  * @Date: 2021-03-09 16:41:56
  * @LastEditors: 轻语
- * @LastEditTime: 2021-03-10 15:02:53
+ * @LastEditTime: 2021-03-10 15:18:49
  * @Description: 
  */
 
@@ -17,9 +17,11 @@ import BsForm from './Form/index.js'
 import BsJsonEditor from './JsonEditor/index'
 import Directives from './Directive/index' // 指令
 import LoadingMark from './Loadingmark/index'
+import BsOperationLog from './OperationLog/index'
 
 // 组件集合，用于遍历
-const components = [BsButton, BsArticleSteps, BsCardMenu, BsCrumbs, BsForm, BsJsonEditor];
+const components =
+  [BsButton, BsArticleSteps, BsCardMenu, BsCrumbs, BsForm, BsJsonEditor, BsOperationLog];
 
 // const utilsLib = [LoadingMark]
 
@@ -63,6 +65,7 @@ export default {
   BsCrumbs,
   BsForm,
   BsJsonEditor,
-  LoadingMark
+  LoadingMark,
+  BsOperationLog
 };
 
