@@ -2,7 +2,7 @@
  * @Author: 轻语
  * @Date: 2021-03-09 16:41:56
  * @LastEditors: 轻语
- * @LastEditTime: 2021-03-10 11:07:12
+ * @LastEditTime: 2021-03-10 14:33:22
  * @Description: 
  */
 
@@ -14,10 +14,11 @@ import BsArticleSteps from "./ArticleSteps/index.js";
 import BsCardMenu from "./CardMenu/index.js";
 import BsCrumbs from './Crumbs/index.js'
 import BsForm from './Form/index.js'
+import BsJsonEditor from './JsonEditor/index'
 import Directives from './Directive/index' // 指令
 
 // 组件集合，用于遍历
-const components = [BsButton, BsArticleSteps, BsCardMenu, BsCrumbs, BsForm];
+const components = [BsButton, BsArticleSteps, BsCardMenu, BsCrumbs, BsForm, BsJsonEditor];
 
 // 定义 install 方法
 const install = function (Vue) {
@@ -40,7 +41,8 @@ export {
   BsButton,
   BsArticleSteps,
   BsCardMenu,
-  BsForm
+  BsForm,
+  BsJsonEditor
 };
 
 export default {
@@ -49,6 +51,7 @@ export default {
   BsArticleSteps,
   BsCardMenu,
   BsCrumbs,
-  BsForm
+  BsForm,
+  BsJsonEditor
 };
 
