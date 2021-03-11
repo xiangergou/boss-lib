@@ -9,7 +9,6 @@
   </ul>
 </template>
 <script>
-import vdom from 'boss-lib/src/utils/vdom.js'
 
 export default {
   name: "bs-article-steps",
@@ -31,8 +30,6 @@ export default {
     }
   },
   mounted() {
-    console.log('fuck')
-    console.log(vdom, 'vdom')
   }
 }
 </script>
