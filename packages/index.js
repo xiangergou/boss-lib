@@ -1,8 +1,8 @@
 /*
  * @Author: 轻语
  * @Date: 2021-03-09 16:41:56
- * @LastEditors: 轻语
- * @LastEditTime: 2021-03-10 16:39:12
+ * @LastEditors:  
+ * @LastEditTime: 2021-03-10 22:54:37
  * @Description: 
  */
 
@@ -22,6 +22,7 @@ import BsQuery from './Query/index.js'
 import BsRichTextEditor from './RichTextEditor/index.js'
 import BsTab from './Tab/index.js'
 import BsTitle from './Title/index.js'
+import BsTabSelect from './TabSelect/index.js'
 
 
 
@@ -29,7 +30,7 @@ import BsTitle from './Title/index.js'
 const components =
   [
     BsButton, BsArticleSteps, BsCardMenu, BsCrumbs, BsForm, BsJsonEditor, BsOperationLog,
-    BsQuery, BsRichTextEditor, BsTab, BsTitle
+    BsQuery, BsRichTextEditor, BsTab, BsTitle, BsTabSelect
   ];
 
 // 定义 install 方法
@@ -64,6 +65,7 @@ export default {
   BsQuery,
   BsRichTextEditor,
   BsTab,
-  BsTitle
+  BsTitle,
+  BsTabSelect
 };
 
