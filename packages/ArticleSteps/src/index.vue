@@ -9,6 +9,7 @@
   </ul>
 </template>
 <script>
+
 export default {
   name: "bs-article-steps",
   data() {
@@ -27,11 +28,13 @@ export default {
         return [{name: 'fuck'}, {name: 'shit'}]
       }
     }
+  },
+  mounted() {
   }
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .suc-steps {
   width: 705px;
   margin: 30px auto;

@@ -1,7 +1,3 @@
-const path = require('path')
-const resolve = (dir) => {
-  return path.join(__dirname, dir)
-}
 module.exports = {
   // 修改 src 目录 为 examples 目录
   pages: {
@@ -15,12 +11,6 @@ module.exports = {
     extract: false
   },
   configureWebpack: {
-    resolve: {
-      alias: {
-        '@': resolve('examples'),
-        '~': resolve('packages')
-      }
-    },
     performance: {
       hints:'warning',
       //入口起点的最大体积
@@ -32,13 +22,5 @@ module.exports = {
         return assetFilename.endsWith('.js');
       }
     }
-  },
-  chainWebpack: config => {
-    config.module
-      .rule('images')
-      .test(/\.(png|jpe?g|gif|webp|svg)(\?.*)?$/)
-      .use('url-loader')
-      .loader('url-loader')
-      .tap(options => Object.assign(options, { limit: 10 * 1024 }))
   }
 };    

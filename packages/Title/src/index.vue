@@ -23,7 +23,7 @@
   </div>
 </template>
 <script>
-import titleIcon from '@/assets/titleico.svg'
+import titleIcon from '../src/img/titleico.svg'
 export default {
   name: 'bs-title',
   props: {
