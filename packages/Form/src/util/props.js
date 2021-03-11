@@ -1,5 +1,6 @@
 // props   Author:Titans@2396757591@qq.com
-import { formGloabalConfig, formConfig, formValidationConfig } from '../config/config'
+import { formGloabalConfig, formConfig, formValidationConfig,  formItemsConfig, formDataList } from '../config/config'
+
 export default {
   formInitGloabalData: { // form表单初始化数据
     type: Object,
@@ -16,13 +17,13 @@ export default {
   formItemsConfig: { // 表单每一条目配置
     type: Array,
     default () {
-      return []
+      return formItemsConfig
     }
   },
   formDataList: { // 表单数据集
     type: Object,
     default () {
-      return {}
+      return formDataList
     }
   },
   formConfig: { // 表单用户配置

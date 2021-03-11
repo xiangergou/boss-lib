@@ -5,7 +5,7 @@
       ref="form"
       sync-resize
       :data="formDataListIn"
-      :items="formItemsConfigIn"
+      :items="formItemsConfigData"
       :rules="formValidationConfigIn"
       :span="formGloabalConfigIn.span"
       :align="formGloabalConfigIn.align"
@@ -20,25 +20,16 @@
       @reset="reset"
       @toggle-collapse="toggleCollapse"
     />
-  <!-- <vxe-form-item
-      v-for="(item,index) in formDataConfigIn"
-      :key="index"
-      :span="item.span"
-      :title="item.title"
-      :field="item.field"
-      :align="item.align"
-      :item="item"
-      :item-render="item.itemRender"
-    /> -->
   </div>
 </template>
 
 <script>
-import data from './util/data.js'
+import { defaultformGloabalConfig } from './config/formDefaultConfig'
 import methods from './util/methods.js'
 import props from './util/props.js'
 import watch from './util/watch.js'
 import mixin from './config/mixin.js'
+
 export default {
   name: 'bs-form',
   components: {},
@@ -48,18 +39,30 @@ export default {
   },
   data() {
     return {
-      ...data
+      formGloabalConfigIn: {
+        ...defaultformGloabalConfig
+      },
+      formItemsConfigData: this.formItemsConfig,
+      formDataListIn: this.formDataList || [],
+      formConfigCp: {
+        formRenderConfig: {},
+        renderers: {},
+        axiosDatas: {}
+      } || this.formConfig,
+      formValidationConfigIn: this.formValidationConfig ||  {}
     }
   },
   methods: {
     ...methods
   },
   created() {
-    this.initCreated()
+    console.log(this.formItemsConfigData, 'formItemsConfigData')
+    console.log(this.formDataListIn, 'formDataListIn')
+    console.log(this.formValidationConfigIn, 'formValidationConfigIn')
+    // this.initCreated()
   },
   mounted() {
-    this.initMounted()
-    console.log(this.formItemsConfigIn, 'formItemsConfigIn')
+    // this.initMounted()
   },
   watch: {
     ...watch
