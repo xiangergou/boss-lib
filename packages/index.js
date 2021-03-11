@@ -2,12 +2,13 @@
  * @Author: 轻语
  * @Date: 2021-03-09 16:41:56
  * @LastEditors: 轻语
- * @LastEditTime: 2021-03-11 14:59:43
+ * @LastEditTime: 2021-03-11 16:05:41
  * @Description: 
  */
 
-// import vxeTable from './plugins/vxeTable.js'
 
+
+import vxeTable from 'boss-lib/src/plugins/vxeTable.js'
 
 import BsButton from "./Button/index.js";
 import BsArticleSteps from "./ArticleSteps/index.js";
@@ -28,7 +29,6 @@ import Alert from './alert/index'
 
 
 
-// 组件集合，用于遍历
 const components =
   [
     BsButton, BsArticleSteps, BsCardMenu, BsCrumbs, BsForm, BsJsonEditor, BsOperationLog,
@@ -41,9 +41,10 @@ const install = function (Vue) {
   if (install.installed) return;
 
   // Vue.use(Directives);
-  // Vue.use(vxeTable)
-  // 遍历注册全局组件
 
+
+  Vue.use(vxeTable)
+  // 遍历注册全局组件
   components.map((component) => Vue.component(component.name, component));
   
   Vue.prototype.$LoadingMark = LoadingMark;

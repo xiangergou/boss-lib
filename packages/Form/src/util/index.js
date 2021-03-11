@@ -54,7 +54,7 @@ const deepObjCopy = (obj) => {
   let newObj = obj instanceof Array ? [] : {}
   for (let key in obj) {
     // 遍历obj,并且判断是obj的属性才拷贝
-    if (obj.hasOwnProperty(key)) {
+    if (Object.prototype.hasOwnProperty.call(obj, key)) {
       // 判断属性值的类型，如果是对象递归调用深拷贝
       newObj[key] =
         typeof obj[key] === 'object' ? me.deepCopy(obj[key]) : obj[key]

@@ -22,7 +22,6 @@ module.exports = {
     alias:  config.alias,
     modules: ['node_modules']
   },
-  // externals: config.externals,
   externals: config.externals,
   performance: {
     hints: false
@@ -38,7 +37,7 @@ module.exports = {
       {
         test: /\.(jsx?|babel|es6)$/,
         include: process.cwd(),
-        exclude: /node_modules|utils\/popper\.js|utils\/date\.js/,
+        exclude: config.jsexclude,
         loader: 'babel-loader'
       },
       {
@@ -59,7 +58,7 @@ module.exports = {
         test: /\.(svg|otf|ttf|woff2?|eot|gif|png|jpe?g)(\?\S*)?$/,
         loader: 'url-loader',
         query: {
-          limit: 10000,
+          limit: 30 * 1024, // 暂定30k
           name: path.posix.join('static', '[name].[hash:7].[ext]')
         }
       }

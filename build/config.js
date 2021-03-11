@@ -33,7 +33,16 @@ components().forEach(function(key) {
 
 
 externals = [Object.assign({
-  vue: 'vue'
+  vue: 'vue',
+  VXETablePluginExcel: 'vxe-table-plugin-excel',
+  XEUtils: 'xe-utils',
+  VXETable: 'vxe-table',
+  VXETablePluginExportXLSX: 'vxe-table-plugin-export-xlsx',
+  XEClipboard: 'xe-clipboard',
+  VXETablePluginElement: 'vxe-table-plugin-element',
+  VXETablePluginMenus: 'vxe-table-plugin-menus',
+  Sortable: 'sortablejs',
+  jsoneditor: 'jsoneditor'
 }, externals), nodeExternals()];
 
 

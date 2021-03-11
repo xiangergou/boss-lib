@@ -392,7 +392,7 @@ export default {
       if (typeof obj !== 'object' || obj === null) return obj
       let newObj = obj instanceof Array ? [] : {}
       for (let key in obj) {
-        if (obj.hasOwnProperty(key)) {
+        if (Object.prototype.hasOwnProperty.call(obj, key)) {
           newObj[key] = typeof obj[key] === 'object' ? me.deepCopy(obj[key]) : obj[key]
         }
       }
