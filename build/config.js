@@ -1,34 +1,45 @@
-var path = require('path');
-var fs = require('fs');
+const fs = require('fs');
+const path = require('path');
 var nodeExternals = require('webpack-node-externals');
-var Components = require('../packages/index.js');
 
-var utilsList = fs.readdirSync(path.resolve(__dirname, '../src/utils'));
-// var mixinsList = fs.readdirSync(path.resolve(__dirname, '../src/mixins'));
-var transitionList = fs.readdirSync(path.resolve(__dirname, '../src/transitions'));
+const excludes = [
+  'index.js',
+  'theme-chalk',
+  'mixins',
+  'utils',
+  'fonts',
+  'images',
+  '.DS_Store',
+  'plugins'
+];
+
+const components = function () {
+  const dirs = fs.readdirSync(path.resolve(__dirname, '../packages'));
+  return dirs.filter(dirName => excludes.indexOf(dirName) === -1);
+};
+
+
+
+const utilsList = fs.readdirSync(path.resolve(__dirname, '../src/utils'));
+
 var externals = {};
 
-Object.keys(Components).forEach(function(key) {
-  externals[`boss-lib/packages/${key}`] = `boss-lib/lib/${key}`;
-});
-
-externals['boss-lib/src/locale'] = 'boss-lib/lib/locale';
 utilsList.forEach(function(file) {
   file = path.basename(file, '.js');
   externals[`boss-lib/src/utils/${file}`] = `boss-lib/lib/utils/${file}`;
 });
-// mixinsList.forEach(function(file) {
-//   file = path.basename(file, '.js');
-//   externals[`boss-lib/src/mixins/${file}`] = `boss-lib/lib/mixins/${file}`;
-// });
-transitionList.forEach(function(file) {
-  file = path.basename(file, '.js');
-  externals[`boss-lib/src/plugins/${file}`] = `boss-lib/lib/plugins/${file}`;
+
+components().forEach(function(key) {
+  externals[`boss-lib/packages/${key}`] = `boss-lib/lib/${key}`;
 });
+
 
 externals = [Object.assign({
   vue: 'vue'
 }, externals), nodeExternals()];
+
+
+exports.components = components()
 
 exports.externals = externals;
 
@@ -39,11 +50,4 @@ exports.alias = {
   'boss-lib': path.resolve(__dirname, '../')
 };
 
-exports.vue = {
-  root: 'Vue',
-  commonjs: 'vue',
-  commonjs2: 'vue',
-  amd: 'vue'
-};
 
-exports.jsexclude = /node_modules|utils\/popper\.js|utils\/date\.js/;

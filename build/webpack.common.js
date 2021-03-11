@@ -2,7 +2,7 @@ const path = require('path');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
-// const config = require('./config');
+const config = require('./config');
 
 module.exports = {
   mode: 'production',
@@ -20,19 +20,11 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
-    alias:  {
-      main: path.resolve(__dirname, '../src'),
-      packages: path.resolve(__dirname, '../packages'),
-      examples: path.resolve(__dirname, '../examples'),
-      'boss-lib': path.resolve(__dirname, '../')
-    },
+    alias:  config.alias,
     modules: ['node_modules']
   },
   // externals: config.externals,
-  externals: {
-    vue: 'vue',
-    // 'boss-lib/packages/plugins': 'boss-lib/packages/plugins'
-  },
+  externals: config.externals,
   performance: {
     hints: false
   },

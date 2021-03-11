@@ -2,7 +2,7 @@
  * @Author: 轻语
  * @Date: 2021-03-09 16:41:56
  * @LastEditors: 轻语
- * @LastEditTime: 2021-03-11 10:48:37
+ * @LastEditTime: 2021-03-11 11:31:07
  * @Description: 
  */
 
@@ -51,6 +51,7 @@ const install = function (Vue) {
 if (typeof window !== "undefined" && window.Vue) {
   install(window.Vue);
 }
+
 
 export default {
   install, 

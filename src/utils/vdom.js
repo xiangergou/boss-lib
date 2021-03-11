@@ -1,3 +1,3 @@
-export default function isVNode() {
-  return 'fuck'
+export default function fuck() {
+  return 'fuck~~~~~~~~~'
 }

@@ -1,14 +1,15 @@
 const path = require('path');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
-
-const Components = require('./get-components')();
-
+const config = require('./config');
 
 const entry = {};
-Components.forEach(c => {
+config.components.forEach(c => {
   entry[c] = `./packages/${c}/index.js`;
 });
+
+console.log(config)
+
 const webpackConfig = {
   mode: 'production',
   entry,
@@ -16,22 +17,14 @@ const webpackConfig = {
     path: path.resolve(process.cwd(), './lib'),
     filename: '[name].js',
     chunkFilename: '[id].js',
-    libraryTarget: 'umd'
+    libraryTarget: 'commonjs2'
   },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
-    alias:  {
-      main: path.resolve(__dirname, '../src'),
-      packages: path.resolve(__dirname, '../packages'),
-      examples: path.resolve(__dirname, '../examples'),
-      'boss-lib': path.resolve(__dirname, '../')
-    },
+    alias:  config.alias,
     modules: ['node_modules']
   },
-  externals: {
-    vue: 'vue',
-    // 'boss-lib/packages/plugins': 'boss-lib/packages/plugins'
-  },
+  externals: config.externals,
   stats: 'none',
   optimization: {
     minimize: false
@@ -62,7 +55,7 @@ const webpackConfig = {
       test: /\.(svg|otf|ttf|woff2?|eot|gif|png|jpe?g)(\?\S*)?$/,
       loader: 'url-loader',
       query: {
-        limit: 10000,
+        limit: 30 * 1024, // 暂定30k
         name: path.posix.join('static', '[name].[hash:7].[ext]')
       }
     }]
