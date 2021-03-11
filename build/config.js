@@ -18,8 +18,6 @@ const components = function () {
   return dirs.filter(dirName => excludes.indexOf(dirName) === -1);
 };
 
-
-
 const utilsList = fs.readdirSync(path.resolve(__dirname, '../src/utils'));
 
 var externals = {};

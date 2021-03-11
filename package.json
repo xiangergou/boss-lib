@@ -13,10 +13,10 @@
     "build:utils": "cross-env BABEL_ENV=utils babel src --out-dir lib --ignore src/index.js",
     "build:style": "gulp build --gulpfile packages/theme-chalk/gulpfile.js && cp-cli packages/theme-chalk/lib lib/theme-chalk",
     "lib": "vue-cli-service build --target lib --name boss-lib --dest lib packages/index.js",
-    "dist": "npm run clean && npm run common && npm run build:style",
     "conf": "webpack --config build/webpack.conf.js",
     "common": "webpack --config build/webpack.common.js && npm run build:utils",
-    "comp": "webpack --config build/webpack.component.js"
+    "comp": "webpack --config build/webpack.component.js",
+    "dist": "npm run clean && npm run common && npm run comp && npm run build:utils && npm run build:style"
   },
   "dependencies": {
     "core-js": "^3.6.5",

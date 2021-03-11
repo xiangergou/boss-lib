@@ -15,7 +15,6 @@ module.exports = {
     filename: 'boss-lib.common.js',
     chunkFilename: '[id].js',
     libraryExport: 'default',
-    library: 'ELEMENT',
     libraryTarget: 'commonjs2'
   },
   resolve: {

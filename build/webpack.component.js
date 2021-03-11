@@ -8,8 +8,6 @@ config.components.forEach(c => {
   entry[c] = `./packages/${c}/index.js`;
 });
 
-console.log(config)
-
 const webpackConfig = {
   mode: 'production',
   entry,
