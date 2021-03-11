@@ -15,7 +15,9 @@
     "lib": "vue-cli-service build --target lib --name boss-lib --dest lib packages/index.js",
     "dist": "npm run clean && npm run common && npm run build:style",
     "conf": "webpack --config build/webpack.conf.js",
-    "common": "webpack --config build/webpack.common.js && npm run build:utils"
+    "common": "webpack --config build/webpack.common.js && npm run build:utils",
+    "comp": "webpack --config build/webpack.component.js"
+
   },
   "dependencies": {
     "core-js": "^3.6.5",
