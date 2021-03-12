@@ -2,7 +2,6 @@
 import vxeTable from 'boss-lib/src/plugins/vxeTable.js'
 
 import BsButton from "./Button/index.js";
-import BsArticleSteps from "./ArticleSteps/index.js";
 import BsCardMenu from "./CardMenu/index.js";
 import BsCrumbs from './Crumbs/index.js'
 import BsForm from './Form/index.js'
@@ -16,7 +15,6 @@ import BsTab from './Tab/index.js'
 import BsTitle from './Title/index.js'
 import BsTabSelect from './TabSelect/index.js'
 import BsUnitTree from './UnitTree/index.js'
-import Alert from './alert/index'
 import BsEditDownTextarea from './EditDownTextarea/index.js'
 import BsUpload from './Upload/index.js'
 import BsEditDownConditions from './EditDownConditions/index.js'
@@ -25,9 +23,9 @@ import BsEditDownConditions from './EditDownConditions/index.js'
 
 const components =
   [
-    BsButton, BsArticleSteps, BsCardMenu, BsCrumbs, BsForm, BsJsonEditor, BsOperationLog,
+    BsButton, BsCardMenu, BsCrumbs, BsForm, BsJsonEditor, BsOperationLog,
     BsQuery, BsRichTextEditor, BsTab, BsTitle, BsTabSelect, BsUnitTree, BsEditDownTextarea,
-    BsUpload, Alert, BsEditDownConditions
+    BsUpload, BsEditDownConditions
   ];
 
 // 定义 install 方法
@@ -54,7 +52,6 @@ if (typeof window !== "undefined" && window.Vue) {
 export default {
   install, 
   BsButton,
-  BsArticleSteps,
   BsCardMenu,
   BsCrumbs,
   BsForm,
@@ -67,7 +64,6 @@ export default {
   BsTitle,
   BsTabSelect,
   BsUnitTree,
-  Alert,
   BsEditDownTextarea,
   BsUpload,
   BsEditDownConditions
