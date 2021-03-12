@@ -27,6 +27,7 @@
     "sortablejs": "^1.13.0",
     "vue": "^2.6.11",
     "vue-quill-editor": "^3.0.6",
+    "vue-splitpane": "^1.0.6",
     "vxe-table": "2.10.4",
     "vxe-table-plugin-element": "^1.10.3",
     "vxe-table-plugin-excel": "^1.6.0",

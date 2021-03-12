@@ -20,12 +20,14 @@ import BsEditDownConditions from './EditDownConditions/index.js'
 import BsTabKeepRouter from './TabKeepRouter/index.js'
 import BsEditInterval from './EditInterval/index.js'
 import BsTable from './Table/index.js'
+import BsLayout from './Layout/index.js'
+// import BsQuickNav from './QuickNav/index.js'  // 待处理vuex 、api
 
 const components =
   [
     BsButton, BsCardMenu, BsCrumbs, BsForm, BsJsonEditor, BsOperationLog,
     BsQuery, BsRichTextEditor, BsTab, BsTitle, BsTabSelect, BsUnitTree, BsEditDownTextarea,
-    BsUpload, BsEditDownConditions, BsTabKeepRouter, BsEditInterval, BsTable
+    BsUpload, BsEditDownConditions, BsTabKeepRouter, BsEditInterval, BsTable, BsLayout
   ];
 
 // 定义 install 方法
@@ -64,6 +66,7 @@ export default {
   BsEditDownConditions,
   BsTabKeepRouter,
   BsEditInterval,
-  BsTable
+  BsTable,
+  BsLayout
 };
 
