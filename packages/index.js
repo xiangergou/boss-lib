@@ -1,12 +1,3 @@
-/*
- * @Author: 轻语
- * @Date: 2021-03-09 16:41:56
- * @LastEditors: 轻语
- * @LastEditTime: 2021-03-12 11:00:01
- * @Description: 
- */
-
-
 
 import vxeTable from 'boss-lib/src/plugins/vxeTable.js'
 
@@ -28,6 +19,7 @@ import BsUnitTree from './UnitTree/index.js'
 import Alert from './alert/index'
 import BsEditDownTextarea from './EditDownTextarea/index.js'
 import BsUpload from './Upload/index.js'
+import BsEditDownConditions from './EditDownConditions/index.js'
 
 
 
@@ -35,7 +27,7 @@ const components =
   [
     BsButton, BsArticleSteps, BsCardMenu, BsCrumbs, BsForm, BsJsonEditor, BsOperationLog,
     BsQuery, BsRichTextEditor, BsTab, BsTitle, BsTabSelect, BsUnitTree, BsEditDownTextarea,
-    Alert, BsUpload
+    BsUpload, Alert, BsEditDownConditions
   ];
 
 // 定义 install 方法
@@ -77,6 +69,7 @@ export default {
   BsUnitTree,
   Alert,
   BsEditDownTextarea,
-  BsUpload
+  BsUpload,
+  BsEditDownConditions
 };
 
