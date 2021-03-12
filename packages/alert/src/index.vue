@@ -2,7 +2,7 @@
  * @Author: 轻语
  * @Date: 2021-03-09 16:44:01
  * @LastEditors: 轻语
- * @LastEditTime: 2021-03-11 12:07:58
+ * @LastEditTime: 2021-03-11 16:35:01
  * @Description: 
 -->
 <template>
@@ -30,7 +30,7 @@ import vdom from 'boss-lib/src/utils/vdom.js'
    created() {
    },
   mounted() {
-    console.log(vdom, 'vdom')
+    console.log(vdom, this.visible, 'vdom')
   }
  }
 </script>
