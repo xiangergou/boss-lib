@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: 
  * @Date: 2021-03-12 14:54:21
- * @LastEditTime: 2021-03-12 16:37:05
+ * @LastEditTime: 2021-03-12 17:13:14
  * @LastEditors:  
  */
 
@@ -34,13 +34,14 @@ import BsFilterComplex from './FilterComplex/index.js'
 import BsFilterSelect from './FilterSelect/index.js'
 import BsFilterInput from './FilterInput/index.js'
 import BsFilterContent from './FilterContent/index.js'
+import BsDialog from './BossDialog/index.js'
 
 const components =
   [
     BsButton, BsCardMenu, BsCrumbs, BsForm, BsJsonEditor, BsOperationLog,
     BsQuery, BsRichTextEditor, BsTab, BsTitle, BsTabSelect, BsUnitTree, BsEditDownTextarea,
     BsUpload, BsEditDownConditions, BsTabKeepRouter, BsEditInterval, BsTable, BsLayout,
-    BsFilterComplex, BsFilterSelect, BsFilterInput, BsFilterContent
+    BsFilterComplex, BsFilterSelect, BsFilterInput, BsFilterContent, BsDialog
   ];
 
 // 定义 install 方法
@@ -84,6 +85,7 @@ export default {
   BsFilterComplex,
   BsFilterSelect,
   BsFilterInput,
-  BsFilterContent
+  BsFilterContent,
+  BsDialog
 };
 
