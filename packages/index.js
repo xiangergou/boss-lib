@@ -6,7 +6,6 @@ import BsCardMenu from "./CardMenu/index.js";
 import BsCrumbs from './Crumbs/index.js'
 import BsForm from './Form/index.js'
 import BsJsonEditor from './JsonEditor/index.js'
-// import Directives from './Directive/index.js' // 指令
 import LoadingMark from './Loadingmark/index.js'
 import BsOperationLog from './OperationLog/index.js'
 import BsQuery from './Query/index.js'
@@ -18,27 +17,22 @@ import BsUnitTree from './UnitTree/index.js'
 import BsEditDownTextarea from './EditDownTextarea/index.js'
 import BsUpload from './Upload/index.js'
 import BsEditDownConditions from './EditDownConditions/index.js'
-
-
+import BsTabKeepRouter from './TabKeepRouter/index.js'
 
 const components =
   [
     BsButton, BsCardMenu, BsCrumbs, BsForm, BsJsonEditor, BsOperationLog,
     BsQuery, BsRichTextEditor, BsTab, BsTitle, BsTabSelect, BsUnitTree, BsEditDownTextarea,
-    BsUpload, BsEditDownConditions
+    BsUpload, BsEditDownConditions, BsTabKeepRouter
   ];
 
 // 定义 install 方法
 const install = function (Vue) {
   if (install.installed) return;
 
-  // Vue.use(Directives);
-
-
   Vue.use(vxeTable)
   // 遍历注册全局组件
   components.map((component) => Vue.component(component.name, component));
-  
   Vue.prototype.$LoadingMark = LoadingMark;
   
 };
@@ -47,7 +41,6 @@ const install = function (Vue) {
 if (typeof window !== "undefined" && window.Vue) {
   install(window.Vue);
 }
-
 
 export default {
   install, 
@@ -66,6 +59,7 @@ export default {
   BsUnitTree,
   BsEditDownTextarea,
   BsUpload,
-  BsEditDownConditions
+  BsEditDownConditions,
+  BsTabKeepRouter
 };
 
