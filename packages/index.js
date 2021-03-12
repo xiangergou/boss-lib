@@ -21,6 +21,7 @@ import BsTabKeepRouter from './TabKeepRouter/index.js'
 import BsEditInterval from './EditInterval/index.js'
 import BsTable from './Table/index.js'
 import BsLayout from './Layout/index.js'
+// import BsReportTable from './ReportTable/index.js'
 // import BsQuickNav from './QuickNav/index.js'  // 待处理vuex 、api
 
 const components =
@@ -67,6 +68,6 @@ export default {
   BsTabKeepRouter,
   BsEditInterval,
   BsTable,
-  BsLayout
+  BsLayout,
 };
 
