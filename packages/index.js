@@ -1,3 +1,10 @@
+/*
+ * @Description: 
+ * @Author: sunlight
+ * @Date: 2021-03-12 14:54:21
+ * @LastEditTime: 2021-03-12 16:00:22
+ * @LastEditors: 轻语
+ */
 
 import vxeTable from 'boss-lib/src/plugins/vxeTable.js'
 
@@ -23,12 +30,14 @@ import BsTable from './Table/index.js'
 import BsLayout from './Layout/index.js'
 // import BsReportTable from './ReportTable/index.js'
 // import BsQuickNav from './QuickNav/index.js'  // 待处理vuex 、api
+import BsFilterComplex from './FilterComplex/index.js'
 
 const components =
   [
     BsButton, BsCardMenu, BsCrumbs, BsForm, BsJsonEditor, BsOperationLog,
     BsQuery, BsRichTextEditor, BsTab, BsTitle, BsTabSelect, BsUnitTree, BsEditDownTextarea,
-    BsUpload, BsEditDownConditions, BsTabKeepRouter, BsEditInterval, BsTable, BsLayout
+    BsUpload, BsEditDownConditions, BsTabKeepRouter, BsEditInterval, BsTable, BsLayout,
+    BsFilterComplex
   ];
 
 // 定义 install 方法
@@ -69,5 +78,6 @@ export default {
   BsEditInterval,
   BsTable,
   BsLayout,
+  BsFilterComplex
 };
 
