@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: 
  * @Date: 2021-03-12 14:54:21
- * @LastEditTime: 2021-03-12 16:04:00
+ * @LastEditTime: 2021-03-12 16:10:46
  * @LastEditors:  
  */
 
@@ -32,13 +32,14 @@ import BsLayout from './Layout/index.js'
 // import BsQuickNav from './QuickNav/index.js'  // 待处理vuex 、api
 import BsFilterComplex from './FilterComplex/index.js'
 import BsFilterSelect from './FilterSelect/index.js'
+import BsFilterInput from './FilterInput/index.js'
 
 const components =
   [
     BsButton, BsCardMenu, BsCrumbs, BsForm, BsJsonEditor, BsOperationLog,
     BsQuery, BsRichTextEditor, BsTab, BsTitle, BsTabSelect, BsUnitTree, BsEditDownTextarea,
     BsUpload, BsEditDownConditions, BsTabKeepRouter, BsEditInterval, BsTable, BsLayout,
-    BsFilterComplex, BsFilterSelect
+    BsFilterComplex, BsFilterSelect, BsFilterInput
   ];
 
 // 定义 install 方法
@@ -80,6 +81,7 @@ export default {
   BsTable,
   BsLayout,
   BsFilterComplex,
-  BsFilterSelect
+  BsFilterSelect,
+  BsFilterInput
 };
 
