@@ -22,9 +22,11 @@
     "core-js": "^3.6.5",
     "element-ui": "^2.4.5",
     "exceljs": "^4.2.1",
+    "file-saver": "^2.0.5",
     "jsoneditor": "^9.2.0",
     "sortablejs": "^1.13.0",
     "vue": "^2.6.11",
+    "vue-quill-editor": "^3.0.6",
     "vxe-table": "2.10.4",
     "vxe-table-plugin-element": "^1.10.3",
     "vxe-table-plugin-excel": "^1.6.0",
@@ -32,8 +34,7 @@
     "vxe-table-plugin-menus": "^1.5.3",
     "xe-clipboard": "^1.10.1",
     "xe-utils": "2.8.3",
-    "xlsx": "0.16.8",
-    "vue-quill-editor": "^3.0.6"
+    "xlsx": "0.16.8"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",

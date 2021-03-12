@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <title>修改</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-9.0%" y="-1.6%" width="117.9%" height="103.4%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="-2" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.15 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="20200923" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1920-新改内页1-3" transform="translate(-1756.000000, -304.000000)">
+            <g id="列表" transform="translate(24.000000, 120.000000)">
+                <g id="操作" filter="url(#filter-1)" transform="translate(1714.000000, 105.000000)">
+                    <g id="1" transform="translate(0.000000, 72.000000)">
+                        <g id="修改" transform="translate(23.000000, 10.000000)">
+                            <rect id="矩形" x="0" y="0" width="14" height="14"></rect>
+                            <path d="M7.64194712,3.73215545 L10.2202804,6.31048878 L4.42048878,12.0672596 C4.19046139,12.295269 3.89107593,12.4402157 3.56955128,12.4792388 L1.65913462,12.7125721 C1.5495071,12.7258849 1.43975365,12.6887906 1.36068015,12.611701 C1.28160665,12.5346115 1.24173615,12.4258358 1.25225962,12.3159054 L1.43746795,10.3661138 C1.46975072,10.0267434 1.61990521,9.70940658 1.86184295,9.46923878 L7.64194712,3.73215545 L7.64194712,3.73215545 Z M12.1387179,11.2403846 C12.5414256,11.2403846 12.8678846,11.5668437 12.8678846,11.9695513 C12.8678846,12.3722589 12.5414256,12.6987179 12.1387179,12.6987179 L7.03455128,12.6987179 C6.63184365,12.6987179 6.30538462,12.3722589 6.30538462,11.9695513 C6.30538462,11.5668437 6.63184365,11.2403846 7.03455128,11.2403846 L12.1387179,11.2403846 Z M11.7755929,1.67882212 L12.2911138,2.19434295 C12.8308867,2.73393035 12.8633175,3.59843535 12.3654888,4.17694712 L12.2867388,4.26080128 L11.2549679,5.28309295 L8.67736378,2.70548878 L9.71642628,1.67371795 C10.2866894,1.10804416 11.2070104,1.11000021 11.7748638,1.67809295 L11.7755929,1.67882212 Z" id="形状" fill="#2A8BFD" fill-rule="nonzero"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

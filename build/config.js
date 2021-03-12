@@ -42,7 +42,8 @@ externals = [Object.assign({
   VXETablePluginElement: 'vxe-table-plugin-element',
   VXETablePluginMenus: 'vxe-table-plugin-menus',
   Sortable: 'sortablejs',
-  jsoneditor: 'jsoneditor'
+  jsoneditor: 'jsoneditor',
+  'file-saver': 'file-saver'
 }, externals), nodeExternals()];
 
 

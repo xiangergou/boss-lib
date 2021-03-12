@@ -1,0 +1,102 @@
+
+// columns= [{
+//     "sumportrait": null,
+//     "year": "2021",
+//     "alltitle": "项目主视图.申报单位",
+//     "expfuncname": null,
+//     "source": "AGENCY",
+//     "expfuncguid": null,
+//     "type": "treeinput", 
+//     "align": "left", 
+//     "expfunccode": null
+//     "province": "610000000",
+//     "expfunc": null,
+//     "reportguid": "89760",
+//     "halign": "center",
+//     "calcpri": 0,
+//     "clength": 21,
+//     "ordernumone": null,
+//     "parsemoney": null,
+//     "visible": true,
+//     "defaultvalue": null,
+//     "valign": "middle",
+//     "refmodelcode": null,
+//     "refmodel": null,
+//     "formuladetname": null,
+//     "field": "agency_",
+//     "refmodelguid": null,
+//     "superguid": null,
+//     "ischecks": null,
+//     "notnull": true,
+//     "guid": "cza7513d814411ea80b0000c2901b001",
+//     "batchmodify": null,
+//     "isconstraint": false,
+//     "title": "预算单位",  // 1
+//     "refmodelname": null,
+//     "tipscontent": null,
+//     "isbuilt": null,
+//     "istips": null,
+//     "elecode": "AGENCY",
+//     "switchable": true,
+//     "ispkcolumn": false,
+//     "editable": false,
+//     "groupnumber": null,
+//     "vxNotNull": true,
+//     "ordernum": "0001",
+//     "formattype": null,
+//     "sortable": false,
+//     "formuladet": null,
+//     "isShow": true,
+//     "width": "120",
+//     "orderrule": null,
+//     "sumquotiety": 1,
+//     "titletooltip": "预算单位",
+//     "lastver": null,
+//     "showgrantauthor": null
+//   }
+
+guid 列唯一标识
+title 列中文名
+field 英文字段
+type 列类型
+ordernum 排序
+titletooltip 列提示信息
+orderrule 排序方式
+visible 列是否可见
+notnull 是否必填
+editable 是否可编辑
+refmodelname 下拉数据源
+source 树形数据源
+defaultvalue 默认值
+ischecks 校验
+isconstraint 是否约束
+formuladetname 公式内容
+calcpri 计算优先级
+align 列数据水平对齐方式
+halign 列表头对齐方式
+valign 单元格数据垂直对齐方式
+clength 字段长度
+sortable 列是否允许排序
+width 列宽度
+ispkcolumn 主键
+ordernumone 资金来源顺序号
+batchmodify 是否允许批量修改
+showgrantauthor 是否授权显示列
+formattype 格式类型
+parsemoney 是否支持金额单位转换
+sumportrait 是否纵向求和
+formuladet 公式内容编码
+groupnumber 分组序号
+isbuilt 是否内置字段
+sumquotiety 系数
+
+
+date 日期
+money 金额
+number 数字
+treeinput 辅助录入树
+select 下拉框
+redio 单选
+text 文本框
+attach 文件上传
+textarea 文本域

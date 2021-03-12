@@ -19,12 +19,13 @@ import BsUpload from './Upload/index.js'
 import BsEditDownConditions from './EditDownConditions/index.js'
 import BsTabKeepRouter from './TabKeepRouter/index.js'
 import BsEditInterval from './EditInterval/index.js'
+import BsTable from './Table/index.js'
 
 const components =
   [
     BsButton, BsCardMenu, BsCrumbs, BsForm, BsJsonEditor, BsOperationLog,
     BsQuery, BsRichTextEditor, BsTab, BsTitle, BsTabSelect, BsUnitTree, BsEditDownTextarea,
-    BsUpload, BsEditDownConditions, BsTabKeepRouter, BsEditInterval
+    BsUpload, BsEditDownConditions, BsTabKeepRouter, BsEditInterval, BsTable
   ];
 
 // 定义 install 方法
@@ -62,6 +63,7 @@ export default {
   BsUpload,
   BsEditDownConditions,
   BsTabKeepRouter,
-  BsEditInterval
+  BsEditInterval,
+  BsTable
 };
 
