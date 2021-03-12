@@ -1,4 +1,3 @@
-<!--  form表单   Author:Titans@2396757591@qq.com -->
 <template>
   <div class="Titans-form editable?'editable':'not-editable'">
     <vxe-form
@@ -56,13 +55,10 @@ export default {
     ...methods
   },
   created() {
-    console.log(this.formItemsConfigData, 'formItemsConfigData')
-    console.log(this.formDataListIn, 'formDataListIn')
-    console.log(this.formValidationConfigIn, 'formValidationConfigIn')
-    // this.initCreated()
+    this.initCreated()
   },
   mounted() {
-    // this.initMounted()
+    this.initMounted()
   },
   watch: {
     ...watch

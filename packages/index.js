@@ -1,8 +1,8 @@
 /*
  * @Author: 轻语
  * @Date: 2021-03-09 16:41:56
- * @LastEditors:  
- * @LastEditTime: 2021-03-11 23:26:43
+ * @LastEditors: 轻语
+ * @LastEditTime: 2021-03-12 11:00:01
  * @Description: 
  */
 
@@ -27,6 +27,7 @@ import BsTabSelect from './TabSelect/index.js'
 import BsUnitTree from './UnitTree/index.js'
 import Alert from './alert/index'
 import BsEditDownTextarea from './EditDownTextarea/index.js'
+import BsUpload from './Upload/index.js'
 
 
 
@@ -34,7 +35,7 @@ const components =
   [
     BsButton, BsArticleSteps, BsCardMenu, BsCrumbs, BsForm, BsJsonEditor, BsOperationLog,
     BsQuery, BsRichTextEditor, BsTab, BsTitle, BsTabSelect, BsUnitTree, BsEditDownTextarea,
-    Alert
+    Alert, BsUpload
   ];
 
 // 定义 install 方法
@@ -75,6 +76,7 @@ export default {
   BsTabSelect,
   BsUnitTree,
   Alert,
-  BsEditDownTextarea
+  BsEditDownTextarea,
+  BsUpload
 };
 
